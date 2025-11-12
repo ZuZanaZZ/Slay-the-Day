@@ -1,7 +1,16 @@
+
+using Microsoft.EntityFrameworkCore;
+using System.Configuration;
+using ToDo.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Integration of PostgreSQL database from: https://dev.to/vzldev/integrating-postgresql-with-a-net-a-step-by-step-guide-3hep
+builder.Services.AddDbContext<MyDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
