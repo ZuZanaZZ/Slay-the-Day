@@ -24,6 +24,18 @@ namespace ToDo.Controllers
             return View(await _context.ToDoTasks.ToListAsync());
         }
 
+        // GET: ToDoTasks/SearchForm
+        public async Task<IActionResult> SearchForm()
+        {
+            return View();
+        }
+
+        // POST: ToDoTasks/SearchResults
+        public async Task<IActionResult> SearchResults(string SearchTerm)
+        {
+            return View("Index", await _context.ToDoTasks.Where( t => t.task.Contains(SearchTerm)).ToListAsync());
+        }
+
         // GET: ToDoTasks/Details/5
         public async Task<IActionResult> Details(int? id)
         {
