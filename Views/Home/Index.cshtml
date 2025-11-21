@@ -3,7 +3,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Welcome to the To do app!</p>
-    <p>Currently it is under construction.</p>
+    <h1 class="display-2 fw-bold mt-5">Slay the Day</h1>
+    <p>Welcome to the Slay the Day! A simple to do application to keep track of your tasks.</p>
+
+    <div class="container row mt-5 gap-2">
+        <button class="col btn btn-lg btn-primary" type="button" 
+            onclick="location.href='@Url.Action("Create", "ToDoTasks")'">Add task</button>
+        <button class="col btn btn-lg btn-primary" type="button" 
+            onclick="location.href='@Url.Action("Index", "ToDoTasks")'">My tasks</button>
+        <button class="col btn btn-lg btn-primary" type="button" 
+            onclick="location.href='@Url.Action("SearchForm", "ToDoTasks")'">Search</button>
+    </div>
 </div>
