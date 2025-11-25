@@ -19,7 +19,7 @@ namespace ToDo.Controllers
         }
 
         // GET: ToDoTasks
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> MyTasks()
         {
             return View(await _context.ToDoTasks.ToListAsync());
         }
