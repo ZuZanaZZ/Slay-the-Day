@@ -33,7 +33,7 @@ namespace ToDo.Controllers
         // POST: ToDoTasks/SearchResults
         public async Task<IActionResult> SearchResults(string SearchTerm)
         {
-            return View("Index", await _context.ToDoTasks.Where( t => t.task.Contains(SearchTerm)).ToListAsync());
+            return View("MyTasks", await _context.ToDoTasks.Where( t => t.task.Contains(SearchTerm)).ToListAsync());
         }
 
         // GET: ToDoTasks/Details/5
@@ -71,7 +71,7 @@ namespace ToDo.Controllers
             {
                 _context.Add(toDoTask);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MyTasks));
             }
             return View(toDoTask);
         }
@@ -122,7 +122,7 @@ namespace ToDo.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MyTasks));
             }
             return View(toDoTask);
         }
@@ -157,7 +157,7 @@ namespace ToDo.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(MyTasks));
         }
 
         private bool ToDoTaskExists(int id)
