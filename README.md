@@ -1,1 +1,1 @@
-To do web application developed with ASP.NET and C#.
+To do web application built with ASP.NET Core MVC, C#, Entity Framework Core, and PostgreSQL.
