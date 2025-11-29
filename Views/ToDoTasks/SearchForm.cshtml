@@ -1,20 +1,20 @@
 ﻿<h4>Search for a task</h4>
-<hr />
+<hr/>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="SearchResults">
             <div class="form-group mt-2">
-                <label for="SearchTerm" class="control-label"></label>
-                <input name="SearchTerm" class="form-control" />
+                <label for="SearchTerm" class="control-label">Enter a task to search.</label>
+                <input name="SearchTerm" class="form-control custom-form-control" />
             </div>
             <div class="form-group mt-3 mb-4">
-                <input type="submit" value="Search" class="btn btn-primary" />
+                <input type="submit" value="Search" class="btn btn-primary custom-btn" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="MyTasks">Back to List</a>
+    <a asp-action="MyTasks" class="btn btn-outline-primary custom-link">Back to List</a>
 </div>
 

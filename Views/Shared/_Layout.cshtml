@@ -11,9 +11,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary-subtle border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light custom-bg-primary border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Slay the Day</a>
+                <a class="navbar-brand custom-link__text" asp-area="" asp-controller="Home" asp-action="Index">Slay the Day</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,13 +21,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ToDoTasks" asp-action="Create">Add Task</a>
+                            <a class="nav-link custom-link__text" asp-area="" asp-controller="ToDoTasks" asp-action="Create">Add Task</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ToDoTasks" asp-action="MyTasks">My Tasks</a>
+                            <a class="nav-link custom-link__text" asp-area="" asp-controller="ToDoTasks" asp-action="MyTasks">My Tasks</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ToDoTasks" asp-action="SearchForm">Search</a>
+                            <a class="nav-link custom-link__text" asp-area="" asp-controller="ToDoTasks" asp-action="SearchForm">Search</a>
                         </li>
                     </ul>
                 </div>
@@ -40,9 +40,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer bg-primary-subtle">
+    <footer class="border-top footer custom-bg-primary">
         <div class="container text-dark">
-            &copy; 2025 - ToDo - <a class="text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - ToDo - <a class="custom-link__text" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

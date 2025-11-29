@@ -8,10 +8,6 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +15,137 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+/* Custom CSS */
+/* Colors */
+:root {
+    --background-color--primary: #f6f5f6;
+    --background-color--secondary: white;
+    --accent-color--primary: #ffb4e5;
+    --accent-color--secondary: #ff6ecd;
+    --text-color: #343A40;
+}
+
+/* Website */
+.custom-bg-primary {
+    background-color: var(--accent-color--primary);
+}
+
+hr {
+    color: var(--accent-color--primary);
+    background-color: var(--accent-color--primary);
+    height: 0.25em;
+}
+
+/* Buttons */
+.custom-btn {
+    color: #5A5A5A;
+    background-color: var(--accent-color--primary);
+    border-color: var(--accent-color--secondary);
+    border-width: 0.15em;
+}
+
+.custom-btn:hover {
+    color: var(--text-color);
+    background-color: var(--accent-color--secondary);
+    border-color: var(--accent-color--primary);
+    border-width: 0.15em;
+}
+
+.btn.custom-btn:focus,
+.btn.custom-btn:focus-visible,
+.btn.custom-btn:focus:not(:focus-visible),
+.btn-check:focus + .btn.custom-btn {
+    color: var(--text-color);
+    background-color: var(--accent-color--secondary);
+    border-color: var(--accent-color--secondary);
+    box-shadow: 0 0 0 0.25em var(--accent-color--primary);
+}
+
+/* Links */
+.custom-link {
+    color: var(--accent-color--secondary);
+    text-decoration: none;
+    border-color: var(--accent-color--secondary);
+    border-width: 0.15em;
+}
+
+.custom-link:hover {
+    color: var(--text-color);
+    background-color: var(--background-color--primary);
+    border-color: var(--accent-color--primary);
+    border-width: 0.15em;
+}
+
+.btn.custom-link:focus,
+.btn.custom-link:focus-visible,
+.btn.custom-link:focus:not(:focus-visible),
+.btn-check:focus + .btn.custom-link {
+    color: var(--text-color);
+    background-color: var(--background-color--primary);
+    border-color: var(--accent-color--primary);
+    box-shadow: 0 0 0 0.25em var(--accent-color--primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-link__text {
+    color: var(--text-color);
+}
+
+.custom-link__text:hover {
+    text-decoration: underline;
+}
+
+.custom-link__text:focus{
+    color: #ff6ecd;
+}
+
+/* Input fields */
+.custom-form-control {
+    border-color: var(--accent-color--secondary);
+    border-width: 0.15em;
+}
+
+.custom-form-control:hover {
+    border-color: var(--accent-color--primary);
+    border-width: 0.15em;
+}
+
+.form-control.custom-form-control:focus,
+.form-control.custom-form-control:focus-visible,
+.form-control.custom-form-control:focus:not(:focus-visible),
+.form-control:focus + .form-control.custom-form-control {
+    color: var(--text-color);
+    background-color: var(--background-color--secondary);
+    border-color: var(--accent-color--primary);
+    box-shadow: 0 0 0 0.25em var(--accent-color--primary);
+}
+
+/* Checkboxes */
+.form-check-input {
+    border-color: var(--accent-color--secondary);
+    border-width: 0.15em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-check-input:hover {
+    border-color: var(--accent-color--primary);
+    border-width: 0.15em;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color--secondary);
+    border-color: var(--accent-color--secondary);
+    border-width: 0.15em;
+}
+
+.form-check-input:focus {
+    border-color: var(--accent-color--primary);
+    box-shadow: 0 0 0 0.25em var(--accent-color--primary);
+    filter: none;
+    outline: none;
 }
