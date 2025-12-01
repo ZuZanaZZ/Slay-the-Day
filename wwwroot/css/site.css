@@ -24,7 +24,8 @@ body {
     --background-color--secondary: white;
     --accent-color--primary: #ffb4e5;
     --accent-color--secondary: #ff6ecd;
-    --text-color: #343A40;
+    --text-color--button: #343A40;
+    --text-color--text: #888888;
 }
 
 /* Website */
@@ -38,6 +39,15 @@ hr {
     height: 0.25em;
 }
 
+/* font colors */
+.text--black {
+    color: var(--text-color--button);
+}
+
+.text--gray {
+    color: var(--text-color--text);
+}
+
 /* Buttons */
 .custom-btn {
     color: #5A5A5A;
@@ -47,7 +57,7 @@ hr {
 }
 
 .custom-btn:hover {
-    color: var(--text-color);
+    color: var(--text-color--button);
     background-color: var(--accent-color--secondary);
     border-color: var(--accent-color--primary);
     border-width: 0.15em;
@@ -57,7 +67,7 @@ hr {
 .btn.custom-btn:focus-visible,
 .btn.custom-btn:focus:not(:focus-visible),
 .btn-check:focus + .btn.custom-btn {
-    color: var(--text-color);
+    color: var(--text-color--button);
     background-color: var(--accent-color--secondary);
     border-color: var(--accent-color--secondary);
     box-shadow: 0 0 0 0.25em var(--accent-color--primary);
@@ -72,7 +82,7 @@ hr {
 }
 
 .custom-link:hover {
-    color: var(--text-color);
+    color: var(--text-color--button);
     background-color: var(--background-color--primary);
     border-color: var(--accent-color--primary);
     border-width: 0.15em;
@@ -82,7 +92,7 @@ hr {
 .btn.custom-link:focus-visible,
 .btn.custom-link:focus:not(:focus-visible),
 .btn-check:focus + .btn.custom-link {
-    color: var(--text-color);
+    color: var(--text-color--button);
     background-color: var(--background-color--primary);
     border-color: var(--accent-color--primary);
     box-shadow: 0 0 0 0.25em var(--accent-color--primary);
@@ -93,7 +103,7 @@ a {
 }
 
 .custom-link__text {
-    color: var(--text-color);
+
 }
 
 .custom-link__text:hover {
@@ -119,7 +129,7 @@ a {
 .form-control.custom-form-control:focus-visible,
 .form-control.custom-form-control:focus:not(:focus-visible),
 .form-control:focus + .form-control.custom-form-control {
-    color: var(--text-color);
+    color: var(--text-color--button);
     background-color: var(--background-color--secondary);
     border-color: var(--accent-color--primary);
     box-shadow: 0 0 0 0.25em var(--accent-color--primary);
@@ -148,4 +158,43 @@ a {
     box-shadow: 0 0 0 0.25em var(--accent-color--primary);
     filter: none;
     outline: none;
+}
+
+/* Tables */
+.custom-table-primary th {
+    color: var(--text-color--button);
+    background-color: var(--accent-color--primary);
+    border-color: var(--accent-color--secondary);
+}
+
+.custom-table-primary td {
+    border-color: var(--accent-color--secondary);
+}
+
+/* Checkmarks */
+/* Cannot style disabled checkboxes, making the non styled checkbox hidden, styling label instead*/
+.checkmark-disabled input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark-disabled label {
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid var(--accent-color--secondary);
+    border-radius: 0.25em;
+    position: relative;
+    cursor: default;
+    vertical-align: middle;
+}
+
+.checkmark-disabled input:checked + label {
+    background-color: var(--accent-color--secondary);
+}
+
+.checkmark-disabled input:checked + label::before {
+    content: "\2713";
+    color: #ffffff;
+    position: absolute;
+    top: -40%;
+    font-size: 0.8em;
 }
