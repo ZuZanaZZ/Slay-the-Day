@@ -1,6 +1,12 @@
-﻿<h4>Search for a task</h4>
+﻿@model ToDo.Models.ToDoTask
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search for a Task</h1>
 <hr/>
-<div class="row">
+<div>
     <div class="col-md-4">
         <form asp-action="SearchResults">
             <div class="form-group mt-2">

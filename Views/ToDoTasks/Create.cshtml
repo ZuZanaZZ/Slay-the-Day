@@ -4,14 +4,14 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create a task</h1>
+<h1>Create a Task</h1>
 <hr/>
 <div>
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group form-check">
-                <label class="form-check-label mt-4">
+                <label class="form-check-label">
                     <input class="form-check-input" asp-for="Done" /> @Html.DisplayNameFor(model => model.Done)
                 </label>
             </div>
