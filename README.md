@@ -46,6 +46,12 @@ Here you can search your tasks by their name.
 
 <img width="800" height="226" alt="image" src="https://github.com/user-attachments/assets/a7077a2b-d93a-445e-8fee-dc263a7cfeb6" />
 
+# Configuration instructions for PostgreSQL database
+- In appsettings.example.json change username and password values to your credentials.
+- Rename files
+	- appsettings.example.json to appsettings.json
+ 	- appsettings.example.Development.json to appsettings.Development.json
+
 # Future
 ## Add more parameters to the tasks:
 - Priority
